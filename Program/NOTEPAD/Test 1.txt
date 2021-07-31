@@ -1,0 +1,223 @@
+/*
+var foodItem = {
+    "itemType" : "Coffee",
+    "itemName" : "Espresso",
+    "itemQuantity" : "Large",
+    "itemCost" : 230,
+    "isItemAvailable" : true
+}
+
+var typeOfTheItem = foodItem.itemType;
+var nameOfTheItem = foodItem.itemName;
+var quantityOfTheItem = foodItem.itemQuantity;
+var CostOfTheItem = foodItem.itemCost;
+var availabilityOfTheItem = foodItem.isItemAvailavle;
+
+alert(typeOfTheItem);
+alert(nameOfTheItem);
+alert(quantityOfTheItem);
+alert(CostOfTheItem);
+alert(availabilityOfTheItem);
+
+//console.log(typeOfTheItem)
+*/
+/*
+var users = [{
+
+    'email' : 'jatin@gkv',
+    'password' : 'jv123',
+    'FirstName' : 'Jatin',
+    'LastName' : 'Vishnoi',
+    'Mob_Number' : 9876543210
+}, {
+
+    'email' : 'ayush@lxy',
+    'password' : 'ac123',
+    'FirstName' : 'Ayush',
+    'LastName' : 'Chaudhary',
+    'mob_Number' : 8976543210
+    }
+]
+
+var getInfo = users[0]
+var getInfo = users[0].FirstName
+alert(getInfo)
+
+OR
+//var getInfo = users[0]
+//var getName = getInfo.FirstName
+//alert(getName)
+*/
+/*
+var a = 10
+var b = 3
+var c = 5
+
+var d = a*b
+alert(d)
+*/
+/*
+var myData = "Jatin" + " " + "Kumar"
+alert(myData)
+*/
+/*
+var a = "Jatin"
+var b = "Kumar"
+var c = "jatin@gkv"
+
+var d = a+" "+b
+alert(d)
+*/
+/*
+//Type Operator
+
+var a = "Jatin"
+var b = 7
+var c = true
+
+alert(typeof(c))
+*/
+/*
+var a = {"Name" :"Jatin" , "FriendName" : "Ayush" , "AnotherFriendName" : "Mohit"}
+var b = ["Kumar", "Chaudhary", "Kumar"]
+//for Object
+alert(typeof(a))
+//for Array
+alert(Array.isArray(b))
+*/
+/*
+var myString = "Hi This Is Jatin Kumar. I Am From Kanth District Moradabad (Uttar Pradesh). I Complete My Grduation And Post Graduation From Gurukula Kangari (Deemed To BE University) Haridwar (Uttarakhand)."
+var myLength = myString.length;
+alert(myLength)
+*/
+/*
+var myString = "Hi This Is Jatin Kumar. I Am From Kanth District Moradabad (Uttar Pradesh). I Complete My Grduation And Post Graduation From Gurukula Kangari (Deemed To BE University) Haridwar (Uttarakhand)."
+var myIndex = myString.indexOf("Jatin")
+alert(myIndex)
+*/
+/*
+var myString = "Hi This Is Jatin Kumar. I Am From Kanth District Moradabad (Uttar Pradesh). I Complete My Grduation And Post Graduation From Gurukula Kangari (Deemed To BE University) Haridwar (Uttarakhand)."
+var myExtracting = myString.slice(11,16)
+alert(myExtracting)
+OR
+var myIndexJatin = myString.indexOf("Jatin")
+var myExtracting = myString.slice(myIndexJatin, myIndexJatin+5)
+alert(myExtracting)
+*/
+/*
+var myString = "Hi This Is Jatin Kumar. I Am From Kanth District Moradabad (Uttar Pradesh). I Complete My Grduation And Post Graduation From Gurukula Kangari (Deemed To BE University) Haridwar (Uttarakhand)."
+var myReplace = myString.replace("Kumar", "Vishnoi")
+alert(myReplace)
+*/
+/*
+var myString = "Hi This Is Jatin Kumar. I Am From Kanth District Moradabad (Uttar Pradesh). I Complete My Grduation And Post Grafuation From Gurukula Kangari (Deemed To BE University) Haridwar (Uttarakhand)."
+
+alert(myString.toUpperCase())
+alert(myString.toLowerCase())
+*/
+/*
+var firstString = "Hi This Is Jatin Kumar. I Am From Kanth District Moradabad (Uttar Pradesh)."
+var secondString = "I Completed My Grduation And Post Grafuation From Gurukula Kangari (Deemed To BE University) Haridwar (Uttarakhand)."
+var myMerge = firstString.concat(secondString)
+alert(myMerge)
+*/
+/*
+var myString = "Hi This Is Jatin Kumar. I Am From Kanth District Moradabad (Uttar Pradesh). I Complete My Grduation And Post Grafuation From Gurukula Kangari (Deemed To BE University) Haridwar (Uttarakhand)."
+var myArray = myString.split("")
+alert(myArray)
+alert(Array.isArray(myArray))
+*/
+
+//Conversion Number To String And String To Number
+/*
+var aNumber = 985635454
+var myNumberToString = aNumber.toString();
+alert(typeof(myNumberToString))
+
+var aString = "5435"
+var myStringToNumber = Number(aString)
+alert(typeof(myStringToNumber))
+*/
+//Array Operations
+/*
+var Fruits = ["Apple","Banana","Mango","Lichi","Pomigranade"]
+var myArrayToString = Fruits.toString()
+alert(myArrayToString)
+*/
+/*
+var Fruits = ["Apple","Banana","Mango","Lichi","Pomigranade"]
+
+Fruits.push("Coconut")
+Fruits.pop()
+
+alert(Fruits)
+*/
+/*
+var Fruits = ["Apple","Banana","Mango","Lichi","Pomigranade"]
+
+Fruits.shift()
+Fruits.unshift("Coconut")
+
+alert(Fruits)
+*/
+/*
+var Fruits = ["Apple","Banana","Mango","Lichi","Pomigranade"]
+Fruits[2] = "Kiwi"
+alert(Fruits)
+*/
+/*
+var Fruits = ["Apple","Banana","Mango","Lichi","Pomigranade"]
+delete Fruits[1]
+alert(Fruits)
+*/
+/*
+var Fruits = ["Apple","Banana","Mango","Lichi","Pomigranade"]
+var moreFruits = ["Coconut","Kiwi"]
+var myMerge = Fruits.concat(moreFruits)
+alert(myMerge)
+*/
+
+//Time And Date
+/*
+var Date = new Date(Date.now())
+alert(Date)
+*/
+/*
+var Date = new Date(Date.now())
+
+alert(Date.getDate())
+alert(Date.getDay())
+alert(Date.getFullYear())
+alert(Date.getMonth())
+*/
+/*
+var itemPurchased = window.prompt('Enter The Number Of Item You Bought')
+
+if(itemPurchased >= 3)
+{
+    alert('You Got the Promo Code')
+}
+else
+{
+    alert("You are not Elegible to Get a Promo Code")
+}
+
+//FOR IN LOOP
+
+var customer = [{
+    "userName" : "Jatin",
+    "userID" : 123
+},
+{
+    "userName" : "Ayush",
+    "userID" : 456
+}]
+
+for(x in customer){
+    console.log(customer[x])
+    //console.log(customer[x].userName)
+    //console.log(customer[x].userID)
+
+}
+
+*/

@@ -1,0 +1,338 @@
+/*
+BLOCK SCOPE
+
+console.log(carPrice)
+var carPrice = 200000;
+
+Outpur=t : undefined
+
+var carPrice = 200000;
+console.log(carPrice)
+
+Output : 200000
+//
+console.log(carPrice)
+let carPrice = 200000;
+
+Output : Uncaught ReferenceError: Cannot access 'carPrice' before initialization
+//
+var x=1;
+for(var x=0; x<10; x++)
+{
+    console.log(x) //Take the x that declare in the loop
+}
+console.log('x =' +x) //The loop runs upto 0-9 and then check agian and find the value of x is 10 but according to loop condition the loop is break so the x's value 10 is read by this console.log
+
+Output : First give the numbers of loop and then give the value of x = 10
+//
+let x=1;
+for(let x=0; x<10; x++)
+{
+    console.log(x) //Take the x that declare in the loop
+}
+console.log('x = ' +x)//Now it's read the value of 1st x
+Output : First give the numbers of loop and then give the value of x = 1
+*/
+/*
+//CONST KEYWORD
+
+const discountPercentage = 10;
+discountPercentage = 20;
+console.log(discountPercentage);
+
+Output : Uncaught TypeError: Assignment to constant variable.
+//
+let oldUser = true;
+const discountPercentage = 10;
+
+if(oldUser == true)
+{
+    const discountPercentage = 20;
+    console.log('Old User Discount Percentage = ' +discountPercentage);
+}
+console.log('New User Discount Percentage = ' +discountPercentage);
+
+Output : Old User Discount Percentage = 20
+         New User Discount Percentage = 10
+*/
+/*
+//ARROW FUNCTION
+
+let multiply = (x,y) =>
+{
+    return x*y;
+}
+console.log(multiply(3,9));
+
+let generateEmail = (name,message) =>
+{
+    let Email = 'Hi'+name+"\n"+
+                "We have a Message for you -\n"
+                +message+"\nCopyright@jv";
+    return Email;
+}
+console.log(generateEmail("Jatin","Wlcome to my Channel"))
+
+OUTPUT : 
+HiJatin
+We have a Message for you -
+Wlcome to my Channel
+Copyright@jv
+*/
+/*
+//DEFAULT PARAMETER
+let multiply = (x,y=5) =>//in this situation automatically y takes value 5 which is default 
+{
+    console.log(x)
+    console.log(y)
+    return x*y;
+}
+console.log(multiply(4))
+//If some parameter is missing it will take default value
+*/
+/*
+//REST PARAMETER EXAMPLE
+
+let allUsersAddress = []
+
+let storeAllUSersAddress = (...userID,...addressToStore) =>{
+
+
+    allUsersAddress.push({userID : userID, userAddress : addressToStore })
+
+    console.log(allUsersAddress);
+    return allUsersAddress;
+}
+
+let firstAddress = {
+    
+    "Mohalla" : "Moh Vishanpura, Kanth ",
+    "District" : "Moradabad",
+    "State" : "Uttar Pradesh",
+    "Pin Code" : 244501
+}
+
+let secondAddress = {
+    "Mohalla" : "Linepar, Near Railway Station",
+    "District" : "Moradabad",
+    "State" : "Uttar Pradesh",
+    "Pin Code" : 244401
+}
+
+storeAllUSersAddress("JV@GKV99", firstAddress, secondAddress)
+//
+let peopleInviteToParty = []
+
+let peopleList = (...people) => {
+
+    let allPeople = people;
+
+    console.log(people)
+
+    peopleInviteToParty = peopleInviteToParty.concat(allPeople);
+    
+    return peopleInviteToParty;
+}
+
+peopleList("Jatin", "Ayush", "Bhanu")
+
+peopleList("Riya", "Ritu", "Yashi")
+
+console.log(peopleInviteToParty);
+//
+function sum(x,y,z) {
+    return x+y+z;
+}
+const numbers = [1,2,3];
+
+console.log(numbers[0]+numbers[1]+numbers[2])
+OR
+function sum(x,y,z) {
+    return x+y+z;
+}
+const numbers = [1,2,3];
+
+console.log(sum(numbers[0], numbers[1], numbers[2]))
+OR
+//SPREAD PARAMETER EXAMPLE
+function sum(x,y,z) {
+    return x+y+z;
+}
+const numbers = [1,2,3];
+
+console.log(sum(...numbers))
+
+//ARRAY CONCATINATION USING SPREAD PARAMETER
+var a = [13,17]
+var b = [45, 35]
+var c = [...a,...b]
+
+console.log(c)
+
+//OBJECT LITERALS
+
+//NORMAL PROGRAM
+
+let firstName = "Jatin"
+let lastName = "Vishnoi"
+
+let userName = {firstName : firstName , lastName : lastName}
+
+console.log(userName);
+
+//OBJECT LITERAL PROGRAM
+
+let firstName = "Jatin"
+let lastName = "Vishnoi"
+
+let userName = {firstName , lastName }
+
+console.log(userName);
+
+//Calculation Inside An Object
+
+let actualPrice = 50000
+let discountPercentage = 10
+
+let priceOfProduct = {
+    actualPrice,
+    discountPercentage,
+
+    calculateFinalPrice(){
+        
+        return actualPrice-((actualPrice*discountPercentage)/100)
+        
+    } 
+}
+
+console.log(priceOfProduct)
+
+console.log(priceOfProduct.calculateFinalPrice())
+
+//Calculation Of Name or String Inside An Object
+
+let firstName = "Jatin"
+let lastName = "Vishnoi"
+
+let userName = {
+    firstName : firstName ,
+    lastName : lastName,
+
+    calculateFullName(){
+
+        return firstName + " " + lastName
+}
+}
+
+console.log(userName.calculateFullName());
+
+//We Can Pass Variable Names as key in the Object Now
+(1)
+let keyIamStoring = "Some Key"
+let valueIamStoring = "Some Value"
+
+let finalFunction ={
+
+    keyIamStoring : valueIamStoring
+}
+
+console.log(finalFunction)
+
+Output : {keyIamStoring: "Some Value"}
+
+//AND
+(2)
+let keyIamStoring = "Some Key"
+let valueIamStoring = "Some Value"
+
+let finalFunction ={
+
+    [keyIamStoring] : valueIamStoring
+}
+
+console.log(finalFunction)
+
+Output :{Some Key: "Some Value"}
+
+//The only difference between 1 nd 2 is of [] these bracekts
+//
+//TEMPLATE LITERALS
+//use numeric BACK TAGS(``) to add strings without any sign
+let newString = 
+
+`A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.
+Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.
+Topic sentences are similar to mini thesis statements. Like a thesis statement, a topic sentence has a specific main point. Whereas the thesis is the main point of the essay, the topic sentence is the main point of the paragraph. Like the thesis statement, a topic sentence has a unifying function.`
+
+console.log(newString)
+
+//If we have two sentences with different declaration
+
+var a = "This is a simple line"
+var b = "This is an another line. Using dot symbol."
+
+var concatinateString = `${a}.${b}`
+
+console.log(concatinateString)
+//
+let generateEmail = (name,message) =>
+{
+    let Email = `Hi ${name}\n
+                We have a Message for you -\n
+                ${message}\n 
+                Copyright@jv`
+    return Email;
+}
+console.log(generateEmail("Jatin","Wlcome to my Channel"))
+OUTPUT:
+Hi Jatin
+
+                We have a Message for you -
+
+                Wlcome to my Channel
+ 
+                Copyright@jv
+
+//EVALUATE AN EXPRESSION INSIDE THE CURLY BRACES
+
+let generateEmail = (firstName,lastName,message) =>
+{
+    let Email = `Hi ${firstName+" "+lastName}\n
+                We have a Message for you -\n
+                ${message}\n 
+                Copyright@jv`
+    return Email;
+}
+console.log(generateEmail("Jatin","Vishnoi","Wlcome to my Channel"))
+
+//ESCAPING OR IGNORING THE CURLY BRACES IN  THE STRING
+
+let someText = `Message is in the curly Braces
+
+{Hello, Welcome To My Channel}`
+
+console.log(someText)
+OR
+//ESCAPING OR IGNORING THE CURLY BRACES IN  THE STRING
+
+let someText = `Message is in the curly Braces
+
+\${Hello, Welcome To My Channel}` //Without backslash dollar is giving an error
+
+console.log(someText)
+
+//FOR OF LOOP(Use Only in Case of Array)
+var customer = [{
+    "userName" : "Jatin",
+    "userID" : 123
+},
+{
+    "userName" : "Ayush",
+    "userID" : 456
+}]
+
+for(x of customer){
+    console.log(x)
+}
+*/
+

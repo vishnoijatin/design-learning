@@ -1,0 +1,424 @@
+//DESIGN
+//Introduction To Frontend DESIGN
+(1)
+<html>
+    <head>
+        <title>A Basic Program</title>
+    </head>
+    <body>
+        <h1>A Basic Program To Understand Working</h1>
+        <h2>Basic Tags</h2>
+        <p>
+            Four weeks in, quarreling and far from home, we came to the loneliest place. 
+            A western railroad town. Remember? I left you at the campsite with greasy pans
+            and told our children not to follow me.
+            The dying light had made me desperate.
+        </p>
+        <p>
+            I have never been fishing on the Susquehanna
+            or on any river for that matter
+            to be perfectly honest.
+
+            Not in July or any month
+            have I had the pleasure—if it is a pleasure—
+            of fishing on the Susquehanna.
+        </p>
+    </body>
+</html>
+//Styling The Page
+(2)//INLINE Styling
+<html>
+    <head>
+        <title>A Basic Program</title>
+    </head>
+    <body>
+        <h1 style="color: firebrick;">A Basic Program To Understand Working</h1>
+        <h2>Basic Paragraphs :-</h2>
+        <p style="color:slateblue;">
+            Four weeks in, quarreling and far from home, we came to the loneliest place. 
+            A western railroad town. Remember? I left you at the campsite with greasy pans
+            and told our children not to follow me.
+            The dying light had made me desperate.
+        </p>
+        <p style="color: yellowgreen;">
+            I have never been fishing on the Susquehanna
+            or on any river for that matter
+            to be perfectly honest.
+
+            Not in July or any month
+            have I had the pleasure—if it is a pleasure—
+            of fishing on the Susquehanna.
+        </p>
+    </body>
+</html>
+(3)//INTERNAL Styling
+<html>
+    <head>
+        <title>A Basic Program</title>
+        <style>
+            body{background-color: yellow;}
+            p{color: tomato;}
+            h1{
+                color:white;
+                background-color: black;
+            }
+            h2{background-color: white;}
+        </style>
+    </head>
+    <body>
+        <h1>A Basic Program To Understand Working</h1>
+        <h2>Basic Tags</h2>
+        <p>
+            Four weeks in, quarreling and far from home, we came to the loneliest place. 
+            A western railroad town. Remember? I left you at the campsite with greasy pans
+            and told our children not to follow me.
+            The dying light had made me desperate.
+        </p>
+        <p>
+            I have never been fishing on the Susquehanna
+            or on any river for that matter
+            to be perfectly honest.
+
+            Not in July or any month
+            have I had the pleasure—if it is a pleasure—
+            of fishing on the Susquehanna.
+        </p>
+    </body>
+</html>
+(4)//EXTERNAL CSS FILE
+<html>
+    <head>
+        <title>A Basic Program</title>
+        <link rel="stylesheet"  href="style.css" //.CSS file called or link by this line
+    </head>
+    <body>
+        <h1>A Basic Program To Understand Working</h1>
+        <h2>Basic Tags</h2>
+        <p>
+            Four weeks in, quarreling and far from home, we came to the loneliest place. 
+            A western railroad town. Remember? I left you at the campsite with greasy pans
+            and told our children not to follow me.
+            The dying light had made me desperate.
+        </p>
+        <p>
+            I have never been fishing on the Susquehanna
+            or on any river for that matter
+            to be perfectly honest.
+
+            Not in July or any month
+            have I had the pleasure—if it is a pleasure—
+            of fishing on the Susquehanna.
+        </p>
+    </body>
+</html>
+//CSS FILE
+p{
+    background-color: black;
+    color: red;
+}
+(5)//Use A Class
+<html>
+    <head>
+        <title>A Basic Program</title>
+		<link rel="stylesheet"  href="style.css" //.CSS file called or link by this line
+    </head>
+    <body>
+        <h1>A Basic Program To Understand Working</h1>
+        <h2>Basic Tags</h2>
+        <p>
+            Four weeks in, quarreling and far from home, we came to the loneliest place. 
+            A western railroad town. Remember? I left you at the campsite with greasy pans
+            and told our children not to follow me.
+            The dying light had made me desperate.
+        </p>
+        <p class="myDesign">
+            I have never been fishing on the Susquehanna
+            or on any river for that matter
+            to be perfectly honest.
+
+            Not in July or any month
+            have I had the pleasure—if it is a pleasure—
+            of fishing on the Susquehanna.
+        </p>
+    </body>
+</html>
+//.CSS File
+//class name as (.className)
+.myDesign{
+	color : black;
+	background-color : brown;
+	font_size : 22px;
+	font-weight : bold;
+}
+(6)//Use ID's
+<html>
+    <head>
+        <title>A Basic Program</title>
+		<link rel="stylesheet"  href="style.css" //.CSS file called or link by this line
+    </head>
+    <body>
+        <h1 id="designId">A Basic Program To Understand Working</h1>
+        <h2>Basic Tags</h2>
+        <p>
+            Four weeks in, quarreling and far from home, we came to the loneliest place. 
+            A western railroad town. Remember? I left you at the campsite with greasy pans
+            and told our children not to follow me.
+            The dying light had made me desperate.
+        </p>
+        <p>
+            I have never been fishing on the Susquehanna
+            or on any river for that matter
+            to be perfectly honest.
+
+            Not in July or any month
+            have I had the pleasure—if it is a pleasure—
+            of fishing on the Susquehanna.
+        </p>
+    </body>
+</html>
+//CSS FILE
+//Id Name as (#IDName)
+#designID{
+    color: white;
+    background-color: black;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+//JS In HTML
+<html>
+    <head>
+        <title>A Basic Program</title>
+        <link rel="stylesheet"  href="style.css">
+    </head>
+    <body>
+        <h1 id="designID">A Basic Program To Understand Working</h1>
+        <h2>Basic Tags</h2>
+        
+        <script type="text/javascript">
+            document.getElementById("designID").innerHTML = "This is Using JS";
+        </script>
+    </body>
+</html>
+//CSS file same as above
+//Another Way Of Using JS in HTML By Making a Different File of JS
+<html>
+    <head>
+        <title>A Basic Program</title>
+        <link rel="stylesheet"  href="style.css">
+    </head>
+    <body>
+        <h1 id="designID">A Basic Program To Understand Working</h1>
+        <h2>Basic Tags</h2>
+        <p>
+            We have curated some great English LKG Rhymes for your children along with the printable lyrics cards. 
+            These rhymes are selected based on phonological awareness (speech sound awareness) of kids at this stage.
+        </p>
+        <script src="index.js"></script>
+      </body>
+</html>
+
+//EXTRA Use Of onclick
+<html>
+    <head>
+        <title>A Basic Program</title>
+        <link rel="stylesheet"  href="style.css">
+    </head>
+    <body>
+        <h1 id="designID" onclick="myJs()">A Basic Program To Understand Working</h1>
+        <h2>Basic Tags</h2>
+        
+        <script type="text/javascript">
+            function myJs()
+            {
+            document.getElementById("designID").innerHTML = "This is Using JS";
+            }
+        </script>
+    </body>
+</html>
+//CSS file same as above
+
+//Using This Make Any Website Non Zoomable 
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+//(This code is using in top in head)
+
+//use of media query in an example below
+//HTML 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+        <link rel="stylesheet" href="example.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-item">
+                <div class="container-font">
+                    This is container font
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+//CSS FILE
+:root {
+    font-size: 25px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d8d8d8;
+}
+
+.container-font {
+    text-align: center;
+    padding-top: 10%;
+    color: white;
+}
+
+.container {
+    margin: 5vw;
+}
+
+.container-item {
+    background-color: #3f3fbf;
+}
+
+@media screen and (min-width: 768px) {
+    .container-item {
+        height: 30vw;
+        background-color: #3f3fbf;
+    }
+    .container-font {
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .container-item {
+        height: 60vw;
+        background-color: yellowgreen;
+    }
+    .container-font {
+        font-size: 1.5rem;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-item {
+        height: 120vw;
+        background-color: tomato;
+    }
+    .container-font {
+        font-size: 1rem;
+        color: lime;
+    }
+}
+
+//Flexbox Example
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Example of Flexbox</title>
+        <link rel="stylesheet"  href="example.css">
+    </head>
+
+    <body>
+        <div class="my-container">
+            <div class="container-item blue myFont">Blue Box</div>
+            <div class="container-item red myFont">Red Box</div>
+            <div class="container-item green myFont">Green Box</div>
+            <div class="container-item black myFont">Black Box</div>
+        </div>
+    </body>
+</html>
+
+//CSS File
+.my-container {
+    
+    display: flex;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+    background-color: white;
+}
+
+.container-item {
+    height: 500px;
+}
+
+.myFont {
+    font-size: 50px;
+    color: white;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.black {
+    background-color: black;
+}
+
+
+@media screen and (min-width: 768px) {
+    
+    .blue {
+        width: 50%;
+    }
+    .red {
+        width: 50%;
+    }
+    .green {
+        width: 50%;
+    }
+    .black {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .blue{
+        width: 50%;
+    }
+    .red {
+        width: 50%;
+    }
+    .green {
+        width: 100%;
+    }
+    .black {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .blue {
+        width: 100%;
+    }    
+    .red {
+        width: 100%;
+    }
+    .green {
+        width: 100%;
+    }
+    .black {
+        width: 100%;
+    }
+}
+
+//
